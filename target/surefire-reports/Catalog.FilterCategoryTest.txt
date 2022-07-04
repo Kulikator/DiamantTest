@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: Catalog.FilterCategoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.438 s <<< FAILURE! - in Catalog.FilterCategoryTest
+filtersCategoryCheck(Catalog.FilterCategoryTest)  Time elapsed: 10.435 s  <<< FAILURE!
+com.codeborne.selenide.ex.InvalidStateException: 
+Invalid element state [By.xpath: .//button[text()='Применить фильтр']]: element click intercepted: Element <button class="catalog-filter__btn-apply button" type="button">...</button> is not clickable at point (407, 996). Other element would receive the click: <div class="loader__wrapper">...</div>
+Screenshot: file:/Users/kirill.kulik/Documents/AutotestDiamant/build/reports/tests/1655986658936.1.png
+Page source: file:/Users/kirill.kulik/Documents/AutotestDiamant/build/reports/tests/1655986658936.1.html
+Timeout: 4 s.
+Caused by: ElementClickInterceptedException: element click intercepted: Element <button class="catalog-filter__btn-apply button" type="button">...</button> is not clickable at point (407, 996). Other element would receive the click: <div class="loader__wrapper">...</div>
+	at Catalog.FilterCategoryTest.filtersCategoryCheck(FilterCategoryTest.java:40)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <button class="catalog-filter__btn-apply button" type="button">...</button> is not clickable at point (407, 996). Other element would receive the click: <div class="loader__wrapper">...</div>
+  (Session info: headless chrome=103.0.5060.53)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'rz-itd-mac136.local', ip: 'fe80:0:0:0:1081:f85:e958:b318%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '11.2.3', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [20d822dfcf3d5e29a2e51ffa497e3521, clickElement {id=d9e15730-9634-4b49-b7de-9252ef0bab6a}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /var/folders/41/v2xnql391hv...}, goog:chromeOptions: {debuggerAddress: localhost:54031}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:54031/devtoo..., se:cdpVersion: 103.0.5060.53, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (20d822dfcf3d5e29a2e51ffa497e3521)] -> xpath: .//button[text()='Применить фильтр']]
+Session ID: 20d822dfcf3d5e29a2e51ffa497e3521
+	at Catalog.FilterCategoryTest.filtersCategoryCheck(FilterCategoryTest.java:40)
+
