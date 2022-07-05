@@ -20,6 +20,9 @@ public class FilterCategoryTest {
 
     @Before
     public void setUp() {
+        Configuration.headless = true;
+        Configuration.browserSize = "1920x1080";
+        Configuration.browser = "Chrome";
         CatalogPage catalogPage = open(DIAMANT_CATALOG, CatalogPage.class);
         WebDriverRunner.getWebDriver().manage().window().maximize();
         catalogPage.cardsWaiting();

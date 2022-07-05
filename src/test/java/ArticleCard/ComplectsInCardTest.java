@@ -21,9 +21,9 @@ public class ComplectsInCardTest {
 
     @Before
     public void setUp() throws InterruptedException {
-       /* Configuration.headless = true;
+        Configuration.headless = true;
         Configuration.browserSize = "1920x1080";
-        Configuration.browser = "Chrome";*/
+        Configuration.browser = "Chrome";
 
         CatalogPage catalogPage = open(DIAMANT_CATALOG_COMPLECTS, CatalogPage.class);
         WebDriverRunner.getWebDriver().manage().window().maximize();

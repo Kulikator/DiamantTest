@@ -25,7 +25,7 @@ public class BreadcrumbsInCardTest {
         Configuration.headless = true;
         Configuration.browserSize = "1920x1080";
         Configuration.browser = "Chrome";
-        ArticleCard articleCard = open("https://prod.diamant.ru/catalog/product/31-131-01042-1/", ArticleCard.class);
+        ArticleCard articleCard = open("https://diamant.dev.sokolov.io/catalog/product/31-131-01042-1/", ArticleCard.class);
         WebDriverRunner.getWebDriver().manage().window().maximize();
         articleCard.breadcrumbWaiter();
         articleCard.BreadcrumbsDotsClick();
