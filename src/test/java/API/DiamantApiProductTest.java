@@ -12,7 +12,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
 
-public class DiamantApiProduct {
+public class DiamantApiProductTest {
     ApiRequests apiRequests = new ApiRequests();
 
     @Rule

@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
 @RunWith(DataProviderRunner.class)
-public class DiamantApiPage {
+public class DiamantApiPageTest {
 
     @Before
     public void setUp() {
