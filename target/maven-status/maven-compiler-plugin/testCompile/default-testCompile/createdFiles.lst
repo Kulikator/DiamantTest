@@ -1,11 +1,11 @@
 Catalog/HiddenButtonsTest.class
 Directory/DirectoryUrlTest.class
 API/DiamantApiPage.class
-SearchJewelryTest.class
 Catalog/MultipleCheckBoxFilterTest.class
 ArticleCard/ComplectsInCardTest.class
 Catalog/ShowMoreButtonClickTest.class
 Catalog/CatalogSortByPriceTest.class
 Catalog/FilterCategoryTest.class
 ArticleCard/BreadcrumbsInCardTest.class
+Catalog/SearchJewelryTest.class
 Catalog/ViewCatalogWithoutInfoTest.class

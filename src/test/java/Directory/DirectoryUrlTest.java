@@ -13,9 +13,9 @@ import static com.codeborne.selenide.Selenide.page;
 public class DirectoryUrlTest {
     @Before
     public void setUp() {
-        Configuration.headless = true;
+        /*Configuration.headless = true;
         Configuration.browserSize = "1920x1080";
-        Configuration.browser = "Chrome";
+        Configuration.browser = "Chrome";*/
         DirectoryPage  directoryPage = open(DIRECTORY_PAGE, DirectoryPage.class);
         WebDriverRunner.getWebDriver().manage().window().maximize();
         directoryPage.directoryPageWaiting();

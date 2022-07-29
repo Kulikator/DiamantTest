@@ -46,13 +46,16 @@ public class ArticleCard {
     @FindBy(css =".product-info__price")
     private SelenideElement articlePrice;
 
+    //Вставка в карточке товара
+    @FindBy(xpath = ".//li[5]//span[@class='list-item__text']")
+    private SelenideElement articleInserts;
+
     public String getArticleName(){
-        String name = articleName.getText();
-        return name;
+        return articleName.getText();
     }
 
     public void waiter(){
-        articleName.shouldBe(visible,ofSeconds(10)).scrollTo();
+        articleName.shouldBe(visible,ofSeconds(100)).scrollTo();
     }
 
     public void breadcrumbWaiter(){
@@ -112,6 +115,10 @@ public class ArticleCard {
 
     public String getArticlePrice(){
         return articlePrice.getText();
+    }
+
+    public String getInsertsOfArt(){
+        return articleInserts.getText();
     }
 
 }

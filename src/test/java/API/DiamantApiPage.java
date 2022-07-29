@@ -17,7 +17,7 @@ public class DiamantApiPage {
 
     @Before
     public void setUp() {
-        RestAssured.baseURI= "https://prod.diamant.ru";
+        RestAssured.baseURI= "https://diamant.dev.sokolov.io";
     }
 
     @DataProvider

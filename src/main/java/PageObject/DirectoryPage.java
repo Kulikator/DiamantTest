@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class DirectoryPage {
 
-    public static final String DIRECTORY_PAGE = "https://prod.diamant.ru/directory";
+    public static final String DIRECTORY_PAGE = "https://diamant.ru/directory";
 
     @FindBy(css = ".tabs__screen--active .page-directory__block.card-directory")
     private ElementsCollection activeDirectoryButtons;
@@ -42,8 +42,8 @@ public class DirectoryPage {
     }
 
     public void directoryButtonsClick(){
-        for (int i = 0; i < activeDirectoryButtons.size(); i++){
-            activeDirectoryButtons.get(i).click();
+        for (SelenideElement activeDirectoryButton : activeDirectoryButtons) {
+            activeDirectoryButton.click();
             cardsWaiting();
             back();
             directoryPageWaiting();

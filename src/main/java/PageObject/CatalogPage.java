@@ -13,14 +13,15 @@ import static com.codeborne.selenide.Selenide.*;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Objects;
 
 import static com.codeborne.selenide.Condition.visible;
 import static java.lang.Thread.sleep;
 
 public class CatalogPage {
 
-    public static final String DIAMANT_CATALOG = "https://diamant.dev.sokolov.io/catalog";
-    public static final String DIAMANT_CATALOG_COMPLECTS = "https://diamant.dev.sokolov.io/catalog/complect/";
+    public static final String DIAMANT_CATALOG = "https://diamant.ru/catalog";
+    public static final String DIAMANT_CATALOG_COMPLECTS = "https://diamant.ru/catalog/complect/";
 
     //Лист родителей фильтра Категория
     @FindBy(how = How.CSS, using = ".field-radio--solid")
@@ -146,6 +147,7 @@ public class CatalogPage {
     @FindBy(css = ".breadcrumbs__last-element")
     private SelenideElement lastBreadcrumb;
 
+
     //Нажатие на кнопку "Показать еще" и ожидание загрузки
     public void buttonShowMoreClick(int count){
         for (int i = 0; i < count; i++ ){
@@ -180,12 +182,18 @@ public class CatalogPage {
     }
 
     //Выбор фильтра вставки
-    public void choseCheckBoxFilterByRandom(){
+    public void choseCheckBoxFilterInsertsByRandom(){
         $(byXpath(".//h1")).scrollTo();
-        labelsInserts.get((int) ((Math.random() * ( labelsInserts.size() - 0 )) + 0)).scrollTo().click();
+        labelsInserts.get((int) ((Math.random() * (labelsInserts.size())) + 0)).scrollTo().click();
         loaderFilterWaiting();
         confirmFilterClick();
         loaderCatalogWaiting();
+    }
+    public void choseCheckBoxFilterInsertsById(int i){
+        $(byXpath(".//h1")).scrollTo();
+        labelsInserts.get(i).scrollTo().click();
+        loaderFilterWaiting();
+        confirmFilterClick();
     }
 
     //Получение вставок первого артикула на выдаче
@@ -238,12 +246,15 @@ public class CatalogPage {
 
     //Клик по id элемента в данный момент на выдаче
     public void artInCatalogClick(int i){
-        artCards.get(i).find(byCssSelector("img")).click();
+        artCards.get(i).find(byCssSelector("img")).doubleClick();
+        if(artCards.get(i).find(byCssSelector("img")).is(visible)){
+            artCards.get(i).find(byCssSelector("img")).doubleClick();
+        }
     }
 
     //Получение минимальной или максимальной цены изделия в каталоге (min или max)
     public String getMinMaxPrice(String value) {
-        if (value == "min" || value == "max") {
+        if (Objects.equals(value, "min") || Objects.equals(value, "max")) {
             value = filterPrice.getAttribute(value);
         } else {
             Assert.fail("Метод принимает только min || max");
@@ -296,5 +307,11 @@ public class CatalogPage {
     public String getTextOfLustBreadcrumb(){
         return lastBreadcrumb.getText();
     }
+
+    public int getSizeOfLabelInserts(){
+        return labelsInserts.size();
+    }
+
+
 
 }

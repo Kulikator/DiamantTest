@@ -1,4 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: Directory.DirectoryUrlTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 96.407 s - in Directory.DirectoryUrlTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 66.421 s <<< FAILURE! - in Directory.DirectoryUrlTest
+directoryPageTest(Directory.DirectoryUrlTest)  Time elapsed: 65.971 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementNotFound: 
+Element not found {.card[1]}
+Expected: visible
+Screenshot: file:/Users/kirill.kulik/Documents/AutotestDiamant/build/reports/tests/1657199250769.1.png
+Page source: file:/Users/kirill.kulik/Documents/AutotestDiamant/build/reports/tests/1657199250769.1.html
+Timeout: 60 s.
+Caused by: java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
+	at Directory.DirectoryUrlTest.directoryPageTest(DirectoryUrlTest.java:27)
+Caused by: java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
+	at Directory.DirectoryUrlTest.directoryPageTest(DirectoryUrlTest.java:27)
+
