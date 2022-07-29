@@ -15,9 +15,9 @@ public class ShowMoreButtonClickTest {
 
     @Before
     public void setUp() {
-        /*Configuration.headless = true;
+        Configuration.headless = true;
         Configuration.browserSize = "1920x1920";
-        Configuration.browser = "Chrome";*/
+        Configuration.browser = "Chrome";
         CatalogPage catalogPage = open(DIAMANT_CATALOG, CatalogPage.class);
         WebDriverRunner.getWebDriver().manage().window().maximize();
         catalogPage.cardsWaiting();

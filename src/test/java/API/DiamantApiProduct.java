@@ -8,13 +8,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ErrorCollector;
 
-import java.util.Collections;
-
-import static com.codeborne.selenide.Condition.not;
-import static net.bytebuddy.matcher.ElementMatchers.is;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
+
 
 public class DiamantApiProduct {
     ApiRequests apiRequests = new ApiRequests();
