@@ -190,7 +190,6 @@ public class CatalogPage {
         loaderCatalogWaiting();
     }
     public void choseCheckBoxFilterInsertsById(int i){
-        $(byXpath(".//h1")).scrollTo();
         labelsInserts.get(i).scrollTo().click();
         loaderFilterWaiting();
         confirmFilterClick();

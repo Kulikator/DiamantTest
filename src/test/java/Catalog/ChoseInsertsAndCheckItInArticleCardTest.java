@@ -23,7 +23,7 @@ public class ChoseInsertsAndCheckItInArticleCardTest {
     @Before
     public void setUp() {
         Configuration.headless = true;
-        Configuration.browserSize = "3840x2160";
+        Configuration.browserSize = "1920x2000";
         Configuration.browser = "Chrome";
         CatalogPage catalogPage = open(DIAMANT_CATALOG, CatalogPage.class);
         WebDriverRunner.getWebDriver().manage().window().maximize();
@@ -37,6 +37,7 @@ public class ChoseInsertsAndCheckItInArticleCardTest {
         ArticleCard articleCard = page(ArticleCard.class);
         for(int i = 0; i < 41; i++) {
             catalogPage.clickAllButtonsShowMoreForFilters();
+
             catalogPage.choseCheckBoxFilterInsertsById(i);
             String insert = catalogPage.getTextOfFirstActiveFilter();
             if (insert.contains(" ")){
