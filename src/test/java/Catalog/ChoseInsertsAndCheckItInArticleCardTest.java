@@ -23,7 +23,7 @@ public class ChoseInsertsAndCheckItInArticleCardTest {
     @Before
     public void setUp() {
         Configuration.headless = true;
-        Configuration.browserSize = "1920x6000";
+        Configuration.browserSize = "3840x2160";
         Configuration.browser = "Chrome";
         CatalogPage catalogPage = open(DIAMANT_CATALOG, CatalogPage.class);
         WebDriverRunner.getWebDriver().manage().window().maximize();

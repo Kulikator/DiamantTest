@@ -175,10 +175,10 @@ public class CatalogPage {
     public void clickAllButtonsShowMoreForFilters(){
         spanInserts.scrollTo();
         buttonsShowMoreForFilters.get(0).click();
-        spanColoursInserts.scrollTo();
+        /*spanColoursInserts.scrollTo();
         buttonsShowMoreForFilters.get(1).click();
         spanOccasion.scrollTo();
-        buttonsShowMoreForFilters.get(2).click();
+        buttonsShowMoreForFilters.get(2).click();*/
     }
 
     //Выбор фильтра вставки
