@@ -16,21 +16,21 @@ import static PageObject.CatalogPage.DIAMANT_CATALOG;
 import static com.codeborne.selenide.Selenide.*;
 import static org.hamcrest.CoreMatchers.containsString;
 
-public class MultipleCheckBoxFilterTest {
+public class ChoseInsertsAndCheckItInArticleCardTest {
     @Rule
     public ErrorCollector collector = new ErrorCollector();
 
     @Before
     public void setUp() {
         Configuration.headless = true;
-        Configuration.browserSize = "1920x3000";
+        Configuration.browserSize = "1920x6000";
         Configuration.browser = "Chrome";
         CatalogPage catalogPage = open(DIAMANT_CATALOG, CatalogPage.class);
         WebDriverRunner.getWebDriver().manage().window().maximize();
         catalogPage.cardsWaiting();
     }
 
-    @DisplayName("Работа чек-бокс фильтров")
+    @DisplayName("Выбираем фильтр-вставка, смотрим что у артикула по данному фильтру есть такая вставка")
     @Test
     public void multipleCheckBoxFiltersWork(){
         CatalogPage catalogPage = page(CatalogPage.class);

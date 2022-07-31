@@ -42,8 +42,8 @@ public class DirectoryPage {
     }
 
     public void directoryButtonsClick(){
-        for (SelenideElement activeDirectoryButton : activeDirectoryButtons) {
-            activeDirectoryButton.click();
+        for (int i = 0; i < activeDirectoryButtons.size(); i++){
+            activeDirectoryButtons.get(i).click();
             cardsWaiting();
             back();
             directoryPageWaiting();
